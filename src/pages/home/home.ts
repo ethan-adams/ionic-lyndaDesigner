@@ -9,14 +9,18 @@ import { ProductProvider } from "../../providers/product/product";
   templateUrl: 'home.html'
 })
 export class HomePage {
+  public allProducts = [];
+  public tempArray;
 
   constructor(private productProvider: ProductProvider, private http: Http, public navCtrl: NavController) {
 
   }
-
+  
   ionViewDidLoad() {
     this.productProvider.getProducts()
-      .subscribe(response => console.log(response));
+    .subscribe((response) => {
+      this.allProducts = response;
+    });  
   }
 
 }

@@ -16,7 +16,7 @@ export class ProductProvider {
   }
 
   getProducts() {
-    return this.http.delete('/assets/data.json');
+    return this.http.get('/assets/data.json');
   }
 
 }
