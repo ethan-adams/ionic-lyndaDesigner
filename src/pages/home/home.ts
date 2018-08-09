@@ -15,7 +15,8 @@ export class HomePage {
   }
 
   ionViewDidLoad() {
-
+    this.productProvider.getProducts()
+      .subscribe(response => console.log(response));
   }
 
 }
