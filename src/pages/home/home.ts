@@ -20,7 +20,7 @@ export class HomePage {
   ionViewDidLoad() {
     this.productProvider.getProducts()
     .subscribe((response) => {
-      this.allProducts = response;
+      this.allProducts = response; //this isnt working
     });  
   }
 
